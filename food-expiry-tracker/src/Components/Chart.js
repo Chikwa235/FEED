@@ -47,3 +47,16 @@ const FoodTypeChart = ({ foodData }) => {
         },
       },
     });
+
+      // Cleanup on component unmount
+    return () => {
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.destroy();
+      }
+    };
+  }, [foodData]);
+
+  return <canvas ref={chartRef} id="foodTypeChart" width="400" height="200"></canvas>;
+};
+
+export default FoodTypeChart;

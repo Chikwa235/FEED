@@ -82,3 +82,8 @@ const searchFoodItems = (query) => {
 
 useEffect(() => {
   if (!mapRef.current) return;
+// Initialize map
+  const map = L.map(mapRef.current, {
+    center: [-15.3875, 28.3228],
+    zoom: 13,
+  });

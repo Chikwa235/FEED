@@ -120,3 +120,26 @@ const setUserLocation = (lat, lng) => {
   .bindPopup("You are here!")
   .openPopup();
 };
+
+ if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        if (isMounted) {
+          setUserLocation(latitude, longitude);
+        }
+      },
+      (err) => console.error("Geolocation error:", err),
+      { enableHighAccuracy: true }
+    );
+  } else {
+    console.warn("Geolocation not supported");
+  }
+
+  return () => {
+    isMounted = false; // Prevent async callbacks from touching map after unmount
+    map.remove();
+  };
+}, []);
+
+

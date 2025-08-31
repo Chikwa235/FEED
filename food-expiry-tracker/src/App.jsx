@@ -193,4 +193,9 @@ return (
   onInput={(e) => searchFoodItems(e.target.value)}
 />
 
+{noResults && (
+  <p style={{ color: 'red', marginTop: '0.5rem' }}>
+    ⚠️ No matching food items found!
+  </p>
+)}
 

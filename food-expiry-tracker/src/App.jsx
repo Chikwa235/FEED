@@ -224,3 +224,9 @@ return (
           style={{ width: '100%', height: '50vh' }}
         ></div>
       </section>
+
+       <section>
+        <h2>I Want to Donate</h2>
+        <DonateForm />
+      </section>
+

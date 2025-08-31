@@ -26,3 +26,12 @@ const App = () => {
     setFilteredFoodData(foodData);
   }, [foodData]);
 
+
+  const calculateMostWastedType = () => {
+    const now = new Date();
+    const counts = {};
+    foodData.forEach(item => {
+      if (new Date(item.expiry) < now) {
+        counts[item.type] = (counts[item.type] || 0) + 1;
+      }
+    });

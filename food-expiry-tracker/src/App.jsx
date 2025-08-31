@@ -35,3 +35,15 @@ const App = () => {
         counts[item.type] = (counts[item.type] || 0) + 1;
       }
     });
+
+     const maxType = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b, 'None');
+    setMostWasted(maxType.charAt(0).toUpperCase() + maxType.slice(1));
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode(prev => {
+      const newMode = !prev;
+      localStorage.setItem('darkMode', newMode);
+      return newMode;
+    });
+  };

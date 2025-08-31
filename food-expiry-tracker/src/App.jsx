@@ -148,7 +148,8 @@ return (
         <div className="header-top-row">
           <h1>🌍 FEED - Food Expiry & Donation Tracker</h1>
           <button id="darkToggleBtn" onClick={toggleDarkMode}>
-            {darkMode ? ☀️ Disable Dark Mode' : '🌙 Enable Dark Mode'};
+            {darkMode ? '☀️ Disable Dark Mode' : '🌙 Enable Dark Mode'}
+
           </button>
         </div>
         <form id="foodForm" onSubmit={(e) => {

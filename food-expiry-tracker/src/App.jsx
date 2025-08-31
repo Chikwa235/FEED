@@ -211,3 +211,16 @@ return (
         <Chart foodData={filteredFoodData} />
       </section>
 
+  <section>
+        <h2>Donate Near You</h2>
+           
+
+        <p id="donateLink" aria-live="polite">
+          🌍 Based on your location: 
+          <a id="donateCenterLink" href="https://www.google.com/search?q=food+donation+near+me" target="_blank" rel="noopener noreferrer">Find Donation Center</a>
+        </p>
+        <div
+          ref={mapRef}
+          style={{ width: '100%', height: '50vh' }}
+        ></div>
+      </section>

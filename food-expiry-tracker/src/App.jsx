@@ -148,7 +148,7 @@ return (
         <div className="header-top-row">
           <h1>🌍 FEED - Food Expiry & Donation Tracker</h1>
           <button id="darkToggleBtn" onClick={toggleDarkMode}>
-            {darkMode ? ☀️ Disable Dark Mode' : '🌙 Enable Dark Mode'}
+            {darkMode ? ☀️ Disable Dark Mode' : '🌙 Enable Dark Mode'};
           </button>
         </div>
         <form id="foodForm" onSubmit={(e) => {
@@ -229,4 +229,19 @@ return (
         <h2>I Want to Donate</h2>
         <DonateForm />
       </section>
+
+ <section>
+        <h2>NGO Contacts Near You</h2>
+        <NGOCard name="United24 (Ukraine Crisis Relief)" website="https://u24.gov.ua/en" />
+        <NGOCard name="World Food Programme" website="https://www.wfp.org/emergencies" />
+        <NGOCard name="FoodBank Zambia" email="info@givedirectly.org" website="https://www.givedirectly.org/covid-19/africa/#zambia" />
+        <NGOCard name="Feeding America" email="info@feedingamerica.org" website="https://www.feedingamerica.org" />
+      </section>
+
+      <footer>&copy; 2025 FEED App | Built with 💡 by Chisapa</footer>
+    </div>
+  );
+};
+
+export default App;
 

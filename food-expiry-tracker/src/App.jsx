@@ -80,3 +80,5 @@ const searchFoodItems = (query) => {
   setNoResults(results.length === 0); // <-- sets warning if no results
 };
 
+useEffect(() => {
+  if (!mapRef.current) return;

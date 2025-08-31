@@ -56,3 +56,6 @@ const App = () => {
     }
   }, [darkMode]);
 
+ const addFoodItem = (newItem) => {
+    setFoodData(prev => [...prev, newItem]);
+  };

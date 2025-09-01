@@ -77,3 +77,13 @@ button {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
+
+button:hover {
+  background: #1a1c33;
+  transform: scale(1.02);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
